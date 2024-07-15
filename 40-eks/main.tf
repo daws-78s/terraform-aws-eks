@@ -12,7 +12,7 @@ module "eks" {
   #cluster_service_ipv4_cidr = var.cluster_service_ipv4_cidr
   cluster_name    = "${var.project_name}-${var.environment}"
   cluster_version = "1.30"
-
+  # it should be false in PROD environments
   cluster_endpoint_public_access = true
 
   vpc_id                   = local.vpc_id
